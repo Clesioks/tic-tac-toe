@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Cell = ({id, cell, setCells, go, setGo, cells}) => {
+const Cell = ({id, cell, setCells, go, setGo, cells, winningMessage}) => {
 
 
 const handleClick = (e) => {
@@ -38,7 +38,7 @@ const handleCellChange = (className) => {
 
 
 return (
-    <div className='square' id={id} onClick={handleClick}>
+    <div className='square' id={id} onClick={!winningMessage && handleClick}>
         <div className={cell}></div>
     </div>
   )
